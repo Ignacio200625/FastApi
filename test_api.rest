@@ -1,0 +1,77 @@
+###
+GET  http://127.0.0.1:8000/coches/
+
+###
+GET  http://127.0.0.1:8000/coches/4
+
+###
+GET  http://127.0.0.1:8000/coches/3/propietario
+
+###
+GET  http://127.0.0.1:8000/propietarios
+
+
+###
+GET  http://127.0.0.1:8000/propietarios/2
+
+###
+POST http://127.0.0.1:8000/coches/
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nombre": 10,
+    "marca": "Lamborgini",
+    "combustible": "Diesel",
+    "antiguedad": 2,
+    "propietario": {
+        "id": 100
+    }
+}
+
+###
+POST http://127.0.0.1:8000/propietarios/
+Content-Type: application/json
+
+{
+    "id": 4,
+}
+
+###
+PUT http://127.0.0.1:8000/coches/
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nombre": "Aventador",
+    "marca": "Lamborgini",
+    "combustible": "Diesel",
+    "antiguedad": 2,
+    "propietario": {
+        "id": 2,
+        "nombre": "Nacho",
+        "edad": 23
+    }
+}
+
+
+###
+DELETE http://127.0.0.1:8000/coches/3
+
+
+###
+PUT http://127.0.0.1:8000/propietarios/
+Content-Type: application/json
+
+{
+    "id": 3,
+}
+
+
+###
+DELETE http://127.0.0.1:8000/propietarios/4
+
+
+
+
+
