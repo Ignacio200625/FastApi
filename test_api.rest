@@ -1,77 +1,91 @@
-###
-GET  http://127.0.0.1:8000/coches/
+###########################################
+# CONDUCTORES
+###########################################
+
+# Obtener todos los conductores
+GET http://127.0.0.1:8000/conductor/
+Accept: application/json
 
 ###
-GET  http://127.0.0.1:8000/coches/4
+
+# Obtener un conductor por ID
+GET http://127.0.0.1:8000/conductor/8
+Accept: application/json
 
 ###
-GET  http://127.0.0.1:8000/coches/3/propietario
 
-###
-GET  http://127.0.0.1:8000/propietarios
-
-
-###
-GET  http://127.0.0.1:8000/propietarios/2
-
-###
-POST http://127.0.0.1:8000/coches/
+# Crear un conductor
+POST http://127.0.0.1:8000/conductor/
 Content-Type: application/json
 
 {
-    "id": 3,
-    "nombre": 10,
-    "marca": "Lamborgini",
-    "combustible": "Diesel",
-    "antiguedad": 2,
-    "propietario": {
-        "id": 100
-    }
+  "nombre": "Alejandro",
+  "genero": "Masculino",
+  "dni": "12345670A",
+  "telefono": 123456720
 }
 
 ###
-POST http://127.0.0.1:8000/propietarios/
+
+# Actualizar un conductor
+PUT http://127.0.0.1:8000/conductor/1
 Content-Type: application/json
 
 {
-    "id": 4,
+  "nombre": "Nacho Martin",
+  "genero": "Masculino",
+  "dni": "12345678A",
+  "telefono": "987654321"
 }
 
 ###
-PUT http://127.0.0.1:8000/coches/
+
+# Eliminar un conductor
+DELETE http://127.0.0.1:8000/conductor/1
+
+###########################################
+# COCHES
+###########################################
+
+# Obtener todos los coches
+GET http://127.0.0.1:8000/coche/
+Accept: application/json
+
+###
+
+# Obtener un coche por ID
+GET http://127.0.0.1:8000/coche/1
+Accept: application/json
+
+###
+
+# Crear un coche
+POST http://127.0.0.1:8000/coche/
 Content-Type: application/json
 
 {
-    "id": 3,
-    "nombre": "Aventador",
-    "marca": "Lamborgini",
-    "combustible": "Diesel",
-    "antiguedad": 2,
-    "propietario": {
-        "id": 2,
-        "nombre": "Nacho",
-        "edad": 23
-    }
+  "nombre": "MiCoche",
+  "marca": "Toyota",
+  "matricula": "Gasolina",
+  "age": 3,
+  "conductor_id": 2
 }
 
-
 ###
-DELETE http://127.0.0.1:8000/coches/3
 
-
-###
-PUT http://127.0.0.1:8000/propietarios/
+# Actualizar un coche
+PUT http://127.0.0.1:8000/coche/1
 Content-Type: application/json
 
 {
-    "id": 3,
+  "nombre": "MiCocheActualizado",
+  "marca": "Toyota",
+  "matricula": "Gasolina",
+  "age": 3,
+  "conductor_id": 1
 }
 
-
 ###
-DELETE http://127.0.0.1:8000/propietarios/4
 
-
-
-
-
+# Eliminar un coche
+DELETE http://127.0.0.1:8000/coche/1
