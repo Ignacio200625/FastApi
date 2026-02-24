@@ -22,4 +22,4 @@ app.include_router(conductor.router)
 
 @app.get("/")
 def root():
-    return {"message": "API de usuarios con FastAPI y SQLite"}
+    return {"message": "API de usuarios con FastAPI y PostgreSQL"}

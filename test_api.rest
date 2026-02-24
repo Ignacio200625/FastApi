@@ -19,10 +19,10 @@ POST http://127.0.0.1:8000/conductor/
 Content-Type: application/json
 
 {
-  "nombre": "Alejandro",
+  "nombre": "Vazquez",
   "genero": "Masculino",
-  "dni": "12345670A",
-  "telefono": 123456720
+  "dni": "12345671A",
+  "telefono": 123456721
 }
 
 ###
@@ -64,10 +64,10 @@ POST http://127.0.0.1:8000/coche/
 Content-Type: application/json
 
 {
-  "nombre": "MiCoche",
-  "marca": "Toyota",
+  "nombre": "Nuevo",
+  "marca": "Mclaren",
   "matricula": "Gasolina",
-  "age": 3,
+  "age": 10,
   "conductor_id": 2
 }
 
